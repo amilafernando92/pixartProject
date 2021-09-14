@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		<title>Pairs-en</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" />
+	</head>
+	<body>
+		<header id="header" class="sticky"></header>
+		<div class="main_container">
+			<div class="container-fluid">
+				<div class="container_title displayflexstart padding0_1_">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 122.88">
+					    <defs>
+					        <style>
+					            .cls-1 {
+					                fill-rule: evenodd;
+					            }
+					            .cls-2 {
+					                fill: #ffffff;
+					            }
+					        </style>
+					    </defs>
+					    <path class="cls-1" d="M61.44,0A61.46,61.46,0,1,1,18,18,61.21,61.21,0,0,1,61.44,0Z"/>
+					    <polygon class="cls-2" points="72.77 38.59 72.77 84.28 60.37 84.28 60.37 50.02 60.1 50.02 50.11 56 50.11 45.47 61.35 38.59 72.77 38.59 72.77 38.59"/>
+					</svg>
+					<svg class="marginleft10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 122.88">
+					    <g>
+					        <path d="M61.44,0c16.97,0,32.33,6.88,43.44,18c11.12,11.12,18,26.48,18,43.44c0,16.97-6.88,32.33-18,43.44 c-11.12,11.12-26.48,18-43.44,18c-16.97,0-32.33-6.88-43.44-18C6.88,93.77,0,78.41,0,61.44C0,44.47,6.88,29.11,18,18 C29.11,6.88,44.47,0,61.44,0L61.44,0z M82.15,86.69H40.73c0.47-4.08,1.92-7.93,4.32-11.53c2.41-3.61,6.91-7.86,13.53-12.77 c4.05-3.01,6.64-5.28,7.78-6.85c1.13-1.56,1.7-3.04,1.7-4.44c0-1.51-0.56-2.81-1.68-3.89c-1.12-1.08-2.53-1.61-4.23-1.61 c-1.76,0-3.2,0.56-4.32,1.67c-1.12,1.12-1.87,3.08-2.25,5.9l-13.81-1.12c0.54-3.9,1.54-6.93,2.98-9.11 c1.45-2.19,3.48-3.85,6.1-5.02c2.64-1.17,6.28-1.75,10.93-1.75c4.86,0,8.63,0.55,11.33,1.67c2.69,1.1,4.82,2.8,6.36,5.09 c1.55,2.3,2.32,4.87,2.32,7.71c0,3.02-0.89,5.91-2.66,8.67c-1.77,2.75-5,5.78-9.68,9.08c-2.78,1.92-4.64,3.27-5.57,4.04 c-0.94,0.77-2.04,1.77-3.31,3.02h21.56V86.69L82.15,86.69z M100.75,22.13C90.69,12.07,76.79,5.85,61.44,5.85 c-15.35,0-29.25,6.22-39.31,16.28C12.07,32.19,5.85,46.09,5.85,61.44c0,15.35,6.22,29.25,16.28,39.31 c10.06,10.06,23.96,16.28,39.31,16.28c15.35,0,29.25-6.22,39.31-16.28c10.06-10.06,16.28-23.96,16.28-39.31 C117.03,46.09,110.81,32.19,100.75,22.13L100.75,22.13z"/>
+					    </g>
+					</svg>
+					<h2 class="margin0 color">Exercise 2</h2>
+				</div>
+				<div class="container_group margin4_0_">
+					<section class="margin0_1_">
+						<div class="row justify-content-start">
+							<div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+								<div class="custom_input_container">
+									<input id="inpuText" title="String in INPUT" class="custom_input" name="TESTO" />
+									<span class="custom_input_span">String in INPUT</span>
+								</div>
+							</div>
+							<div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+								<div class="custom_button_container margin0_1_">
+									<button type="button" class="btn btn-outline-primary custom_button" onclick="addToInput()">Aggiungi Stringa</button>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12 col-sm-5 col-md-5 col-lg-5 col-xl-5">
+								<table id="lista_input" class="table table-hover table-striped">
+									<tbody></tbody>
+								</table>
+							</div>
+							<div class="col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+								<div class="displayflexcenter">
+									<div class="custom_button_circle_container">
+										<button type="button" class="custom_button_circle personali displayflexcenter" onclick="transformaListaPairsEn()">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+											    <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"/>
+											</svg>
+										</button>
+										<span class="custom_button_circle_span">Trasforma</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 col-sm-5 col-md-5 col-lg-5 col-xl-5">
+								<table id="lista_output" class="table table-hover table-striped">
+									<tbody></tbody>
+								</table>
+							</div>
+						</div>
+					</section>
+				</div>
+				<div class="main_group_button displayflexend">
+					<div class="custom_button_container margin0_1_">
+						<button type="button" class="btn btn-outline-primary custom_button" onclick="generaPDF()">
+							<div class="header_container displayflexstart">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+								    <path d="M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM332.1 128H256V51.9l76.1 76.1zM48 464V48h160v104c0 13.3 10.7 24 24 24h104v288H48zm250.2-143.7c-12.2-12-47-8.7-64.4-6.5-17.2-10.5-28.7-25-36.8-46.3 3.9-16.1 10.1-40.6 5.4-56-4.2-26.2-37.8-23.6-42.6-5.9-4.4 16.1-.4 38.5 7 67.1-10 23.9-24.9 56-35.4 74.4-20 10.3-47 26.2-51 46.2-3.3 15.8 26 55.2 76.1-31.2 22.4-7.4 46.8-16.5 68.4-20.1 18.9 10.2 41 17 55.8 17 25.5 0 28-28.2 17.5-38.7zm-198.1 77.8c5.1-13.7 24.5-29.5 30.4-35-19 30.3-30.4 35.7-30.4 35zm81.6-190.6c7.4 0 6.7 32.1 1.8 40.8-4.4-13.9-4.3-40.8-1.8-40.8zm-24.4 136.6c9.7-16.9 18-37 24.7-54.7 8.3 15.1 18.9 27.2 30.1 35.5-20.8 4.3-38.9 13.1-54.8 19.2zm131.6-5s-5 6-37.3-7.8c35.1-2.6 40.9 5.4 37.3 7.8z"/>
+								</svg>
+								<h6 class="margin0" style="padding-left: 5px;">PDF</h6>
+							</div>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer id="footer" class="fixed"></footer>
+		<div class="modal classModal" id="modalModifica">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<div class="displayflexspacebetween width100_">
+							<h4 class="modal-title">Modifica della Stringa</h4>
+							<div class="custom_button_circle_container">
+								<button type="button" class="custom_button_circle personali displayflexcenter" onclick="closeModal(this)">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512">
+									    <path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"/>
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="modal-body">
+						<form id="formModifica">
+							<input type="hidden" id="idTR" />
+							<div class="custom_input_container">
+								<input id="stringModifica" title="Stringa da modificare" class="custom_input" name="TESTO" />
+								<span class="custom_input_span">Stringa in INPUT</span>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<div class="form_button displayflexend">
+							<div class="custom_button_container">
+								<button type="button" class="btn btn-outline-primary custom_button" onclick="confermaModifica()">Conferma</button>
+							</div>
+							<div class="custom_button_container">
+								<button type="button" class="btn btn-outline-primary custom_button" onclick="closeModal(this)">Annulla</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal classModal" id="modalErrore">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<div class="displayflexspacebetween width100_">
+							<h4 class="modal-title">Errore</h4>
+							<div class="custom_button_circle_container">
+								<button type="button" class="custom_button_circle personali displayflexcenter" onclick="closeModal(this)">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512">
+									    <path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"/>
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="modal-body">
+						<section>
+							<p>ATTENZIONE!! NON CI SONO VALORI DA TRASFORMARE</p>
+						</section>
+					</div>
+					<div class="modal-footer">
+						<div class="form_button displayflexend">
+							<div class="custom_button_container">
+								<button type="button" class="btn btn-outline-primary custom_button" onclick="closeModal(this)">Annulla</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+		<script type="text/javascript">
+			$(window).on('load', function() {
+				$('#header').load('header.html');
+				checkInput('input[name=TESTO]');
+				$('#footer').load('footer.html');
+			});
+			
+			$(document).on('change keyup', 'input[name=TESTO]', function() {
+				checkInput(this);
+			});
+		</script>
+	</body>
+</html>

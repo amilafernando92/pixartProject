@@ -1,0 +1,443 @@
+/*
+	* Customizzazione header
+*/
+
+header.sticky {
+	height: 50px;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+}
+
+nav.navbar {
+	display: block;
+    position: relative;
+}
+
+header.sticky nav.navbar {
+	background-color: #ffffff;
+}
+
+nav.navbar ul li {
+	align-items: flex-end;
+	background-color: transparent;
+}
+
+nav.navbar ul, nav.navbar ul li {
+	display : flex;
+}
+
+nav.navbar ul li a {
+	text-decoration: none;
+}
+
+nav.navbar ul li a div.header_container h6 {
+	margin-left: 2px;
+}
+
+/*
+	*
+*/
+body div.main_container {
+    padding: 70px 2%;
+}
+
+body div.main_container div.container-fluid {
+    border: 2px solid #264d7a;
+	margin: 2% 0;
+    position: relative;
+    display: block;
+}
+
+div.main_container div.container-fluid div.container_title {
+    width: auto;
+    background-color: #ffffff;
+    position: absolute;
+    top: -25px;
+    left: -2px;
+}
+
+div.main_container div.container-fluid div.container_title h2 {
+	margin-left: 10px
+}
+
+/*
+	* Customizzazioni costanti
+*/
+
+.removeAnchor {
+	text-decoration: none;
+    color: #264d7a;
+    font-weight: bold;
+}
+
+.removeAnchor:hover {
+    color: #b2ce27;
+}
+
+.color {
+    color: #264d7a;
+}
+
+svg {
+    width: 50px;
+    height: 50px;
+    fill: #264d7a;
+}
+
+.margin0_1_ {
+	margin : 0 1%;
+}
+
+.margin1_ {
+	margin : 1%;
+}
+
+.margin4_0_ {
+	margin : 4% 0;
+}
+
+.margin0 {
+	margin : 0;
+}
+
+.padding0_1_ {
+	padding : 0 1%;
+}
+
+.marginleft10 {
+	margin-left : 10px;
+}
+
+.width100_ {
+	width: 100%;
+}
+
+.width90_ {
+	width: 90%;
+}
+
+.width40_ {
+	width: 40%;
+}
+
+.width5_ {
+	width: 5%;
+}
+
+.width20 {
+	width: 20px;
+}
+
+.height20 {
+	height: 20px;
+}
+
+.floatleft {
+	float: left;
+}
+
+.floatright {
+	float: right;
+}
+
+.displayflexstart {
+    display: -moz-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.displayflexend {
+	display: -moz-box;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.displayflexspacebetween {
+	display: -moz-box;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/*
+	* Customizzazione container del input e del bottone
+*/
+div.custom_input_container, div.custom_button_container {
+    padding: 15px 20px;
+    width: 100%;
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+}
+
+/*
+	* Customizzazione del input
+*/
+div.custom_input_container input.custom_input {
+    color: #222222;
+    outline: none;
+    border: 1px solid #d4d7d9;
+    width: 100%;
+    background-color: transparent;
+}
+
+/*
+	* Customizzazione del input span
+*/
+div.custom_input_container span.custom_input_span {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    color: #9fa0a1;
+    position: absolute;
+    background-color: #ffffff;
+    padding: 0 10px;
+    top: 26px;
+    left: 26px;
+    pointer-events: none;
+    -moz-transition: top .5s ease;
+    -o-transition: top .5s ease;
+    -webkit-transition: top .5s ease;
+    -ms-transition: top .5s ease;
+    transition: top .5s ease;
+}
+
+/*
+	* Customizzazione comuni del input e del bottone
+*/
+div.custom_input_container input.custom_input, div.custom_button_container button.custom_button {
+	font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    padding: 10px 15px;
+    border-radius: 8px;
+    line-height: inherit;
+    box-shadow: none;
+}
+
+/*
+	* Customizzazione del input e gli eventi del input
+*/
+div.custom_input_container input.custom_input:active ~ span.custom_input_span, div.custom_input_container input.custom_input:focus ~ span.custom_input_span, div.custom_input_container input.custom_input.has_value ~ span.custom_input_span {
+    top: 3px;
+    -moz-transition: top .5s ease;
+    -o-transition: top .5s ease;
+    -webkit-transition: top .5s ease;
+    -ms-transition: top .5s ease;
+    transition: top .5s ease;
+    color:  #b2ce27;
+}
+
+div.custom_input_container input.custom_input:active, div.custom_input_container input.custom_input:focus, div.custom_input_container input.custom_input.has_value {
+    border: 1px solid #b2ce27 !important;
+}
+
+/*
+	* Customizzazione del input e gestione dei errori
+*/
+div.custom_input_container.has-error input.custom_input {
+    border: 1px solid #ff0000;
+}
+
+
+div.custom_input_container.has-error span.custom_input_span {
+    color:  #ff0000;
+}
+
+
+div.container-fluid div.main_group_button.fix {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+}
+
+/*
+	* Customizzazione del bottone e gli eventi del bottone
+*/
+div.custom_button_container button.custom_button {
+    color: #b2ce27;
+    background-color: transparent;
+    border-color: #b2ce27;
+}
+
+div.custom_button_container button.custom_button:focus, div.custom_button_container button.custom_button:hover, div.custom_button_container button.custom_button:focus svg, div.custom_button_container button.custom_button:hover svg {
+    color: #ffffff;
+    background-color: #b2ce27;
+    border-color: #b2ce27;
+}
+
+/*
+	* Customizzazione del bottone sotto
+*/
+
+div.container-fluid div.main_group_button {
+    position: absolute;
+    right: 1%;
+    bottom: -24px;
+    background-color: #ffffff;
+}
+
+div.container-fluid div.main_group_button div.custom_button_container {
+	padding: 0;
+}
+
+div.container-fluid div.main_group_button div.custom_button_container svg {
+	width: 20px;
+	height: 20px;
+    fill: #b2ce27;
+}
+
+div.container-fluid div.main_group_button div.custom_button_container button.custom_button:focus svg, div.container-fluid div.main_group_button div.custom_button_container button.custom_button:hover svg {
+    fill: #ffffff;
+}
+
+/**
+ * 
+ * custom button5 - bottoni a cerchio piccoli
+ * 
+ */
+
+div.custom_button_circle_container {
+	position: relative;
+}
+
+div.custom_button_circle_container button.custom_button_circle {
+	box-shadow: none;
+	outline: none;
+	padding: 5px;
+	width: 40px;
+	height: 40px;
+	background-color: transparent;
+    border: 1px solid #b2ce27;
+	color: #ffffff;
+	margin: 0;
+	border-radius: 100%;
+    display: block;
+    text-align: center;
+}
+
+div.custom_button_circle_container button.custom_button_circle svg {
+	width: 20px;
+	height: 20px;
+	fill: #b2ce27;
+	display: inline-block;
+    vertical-align: middle;
+}
+
+div.custom_button_circle_container button.custom_button_circle:hover, div.custom_button_circle_container button.custom_button_circle:active, div.custom_button_circle_container button.custom_button_circle:focus {
+	background-color: #b2ce27;
+    border: 1px solid #b2ce27;
+}
+
+div.custom_button_circle_container button.custom_button_circle:hover svg, div.custom_button_circle_container button.custom_button_circle:active svg, div.custom_button_circle_container button.custom_button_circle:focus svg {
+	fill: #ffffff;
+}
+
+div.custom_button_circle_container span.custom_button_circle_span {
+	display: none;
+	background-color: #ffffff;
+	-webkit-box-shadow: 0 1px 10px rgba(0,0,0,.1);
+	box-shadow: 0 1px 10px rgba(0,0,0,.1);
+	position: absolute;
+	padding: 0 1%;
+	border-bottom: solid 2px #b2ce27;
+	white-space: nowrap;
+	text-align: center;
+	font-size: 14px;
+	font-family: 'Roboto', sans-serif;
+}
+
+div.custom_button_circle_container span.custom_button_circle_span::after {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	width: 0;
+	height: 0;
+	z-index: 901;
+}
+
+div.custom_button_circle_container button.custom_button_circle:hover ~ span.custom_button_circle_span::after {
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 8px solid #b2ce27;
+	left: 50%;
+	-ms-transform: translate(-50%, 22px);
+	-webkit-transform: translate(-50%, 22px);
+	transform: translate(-50%, 22px);
+}
+
+div.custom_button_circle_container button.custom_button_circle:hover ~ span.custom_button_circle_span {
+	-ms-transform: translate(-15px, -70px);
+	-webkit-transform: translate(-15px, -70px);
+	transform: translate(-15px, -70px);
+	display: block;
+}
+
+/*
+	* Customizzazione del brackets.html
+*/
+
+table tbody tr {
+	--bs-table-accent-bg: transparent !important;
+	color: #264d7a !important;
+	border-top: 2px solid #264d7a;
+}
+
+table tbody tr:nth-child(1) {
+	border: 0;
+}
+
+table tbody tr td {
+    background-color: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+/*
+	* Altri
+*/
+
+ul.architecture:before {
+    content: attr(aria-label);
+    font-weight: bold;
+    margin-left: 0;
+}
+
+ul.architecture li {
+    margin-left: 25px;
+}
+
+/*
+	* Customizzazione del footer
+*/
+
+footer {
+    color: #ffffff;
+    background-color: #264d7a;
+    height: 60px;
+}
+
+footer.fixed {
+	position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer h6 {
+    margin: 0;
+    text-align: center;
+}
